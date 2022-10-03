@@ -1,0 +1,26 @@
+@import "src/assets/scss/functions";
+@import "src/assets/scss/variables";
+@import "src/assets/scss/maps";
+@import "src/assets/scss/mixins";
+@import "src/assets/scss/utilities";
+
+$all-colors: map-merge-multiple($grays, $blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+@import "src/assets/scss/utilities/api";
