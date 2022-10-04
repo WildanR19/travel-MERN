@@ -23,7 +23,7 @@ const MostPicked = (props) => {
                       {item.name}
                     </h5>
                   </Button>
-                  <span>
+                  <span className="fw-light">
                     {item.city}, {item.country}
                   </span>
                 </div>
