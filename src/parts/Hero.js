@@ -12,15 +12,15 @@ const Hero = (props) =>
 {
   const showMostPicked = () => {
     window.scrollTo({
-      top: props.refMostPicked.current.offsetTop = 30,
+      top: props.refMostPicked.current.offsetTop - 30,
       behavior: 'smooth'
     })
   }
 
   return (
     <section className="container pt-4">
-      <div className="row align-items-center justify-content-md-center">
-        <div className="col-auto me-5" style={{width: 530}}>
+      <div className="row align-items-center justify-content-between">
+        <div className="col-auto" style={{width: 530}}>
           <h1 className="fw-bold lh-base mb-3">
             Forget Busy Work, <br/>
             Start Next Vacation
@@ -56,10 +56,10 @@ const Hero = (props) =>
           </div>
         </div>
 
-        <div className="col-6 ps-5">
+        <div className="col-auto">
           <div className="imageHero">
-            <img src={imageHero} alt="Room with couches" className="img-fluid position-absolute imageHero" style={{zIndex: 1}}/>
-            <img src={frameHero} alt="Room with couches" className="img-fluid position-absolute imageHero" style={{margin: '30px 0 0 30px'}}/>
+            <img src={imageHero} alt="Room with couches" className="img-fluid position-absolute imageHero" style={{margin: '-30px 0 0 -30px', zIndex: 1}}/>
+            <img src={frameHero} alt="Room with couches" className="img-fluid position-absolute imageHero"/>
           </div>
         </div>
       </div>
