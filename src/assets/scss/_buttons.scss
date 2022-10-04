@@ -35,11 +35,15 @@
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+  min-height: 50px;
   @include border-radius(var(--#{$prefix}btn-border-radius));
   @include gradient-bg(var(--#{$prefix}btn-bg));
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
   @include transition($btn-transition);
 
+  &.btn-shadow {
+    box-shadow: 0 8px 15px rgba(50, 82, 223, 0.3);
+  }
   :not(.btn-check) + &:hover,
   &:first-child:hover {
     color: var(--#{$prefix}btn-hover-color);
