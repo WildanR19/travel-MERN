@@ -5,7 +5,7 @@ import Button from "../elements/Button";
 
 const Testimony = ({data}) => {
   return (
-    <div className="container" style={{height:1000}}>
+    <div className="container">
       <div className="row align-items-center">
         <div className="col-4">
           <div className="testimonial-hero">
@@ -15,7 +15,7 @@ const Testimony = ({data}) => {
         </div>
         <div className="col">
           <h4 style={{marginBottom: 40}}>{data.name}</h4>
-          <Star value={data.rate} width={48} height={48} spacing={4} />
+          <Star value={data.rate} width={35} height={35} spacing={4} />
           <h2 className="fw-light lh-sm my-2">
             {data.content}
           </h2>

@@ -16,7 +16,7 @@ const Star = ({value, height, width, spacing, className}) => {
   if (decimals > 0 && value <= 5) {
     star.push(
       <div className="star" key={`starWithDecimal`}
-           style={{left: leftPosition, width: decimals * width, height: height}}></div>
+           style={{left: leftPosition, width: decimals * width - spacing, height: height}}></div>
     )
   }
 
