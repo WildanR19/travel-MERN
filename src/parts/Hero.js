@@ -18,52 +18,54 @@ const Hero = (props) =>
   }
 
   return (
-    <section className="container pt-4">
-      <div className="row align-items-center justify-content-between">
-        <div className="col-auto" style={{width: 530}}>
-          <h1 className="fw-bold lh-base mb-3">
-            Forget Busy Work, <br/>
-            Start Next Vacation
-          </h1>
-          <p className="mb-4 fw-light text-gray-500 w-75" style={{lineHeight: '170%'}}>
-            We provide what you need to enjoy your
-            holiday with family. Time to make another
-            memorable moments.
-          </p>
-          <Button className="btn px-5" hasShadow isPrimary onClick={showMostPicked}>
-            Show me now
-          </Button>
+    // <Fade direction="up">
+      <section className="container pt-4">
+        <div className="row align-items-center justify-content-between">
+          <div className="col-auto" style={{width: 530}}>
+            <h1 className="fw-bold lh-base mb-3">
+              Forget Busy Work, <br/>
+              Start Next Vacation
+            </h1>
+            <p className="mb-4 fw-light text-gray-500 w-75" style={{lineHeight: '170%'}}>
+              We provide what you need to enjoy your
+              holiday with family. Time to make another
+              memorable moments.
+            </p>
+            <Button className="btn px-5" hasShadow isPrimary onClick={showMostPicked}>
+              Show me now
+            </Button>
 
-          <div className="row" style={{marginTop: 80}}>
-            <div className="col-auto" style={{marginRight: 50}}>
-              <img src={ic_traveler} alt={`${props.data.travelers} Travelers`}/>
-              <h6 className="mt-3">
-                {numberFormat(props.data.travelers)} <span className="text-gray-500 fw-light">Travelers</span>
-              </h6>
+            <div className="row" style={{marginTop: 80}}>
+              <div className="col-auto" style={{marginRight: 50}}>
+                <img src={ic_traveler} alt={`${props.data.travelers} Travelers`}/>
+                <h6 className="mt-3">
+                  {numberFormat(props.data.travelers)} <span className="text-gray-500 fw-light">Travelers</span>
+                </h6>
+              </div>
+              <div className="col-auto" style={{marginRight: 50}}>
+                <img src={ic_treasure} alt={`${props.data.treasures} Treasures`}/>
+                <h6 className="mt-3">
+                  {numberFormat(props.data.treasures)} <span className="text-gray-500 fw-light">Treasures</span>
+                </h6>
+              </div>
+              <div className="col-auto">
+                <img src={ic_cities} alt={`${props.data.cities} Cities`}/>
+                <h6 className="mt-3">
+                  {numberFormat(props.data.cities)} <span className="text-gray-500 fw-light">Cities</span>
+                </h6>
+              </div>
             </div>
-            <div className="col-auto" style={{marginRight: 50}}>
-              <img src={ic_treasure} alt={`${props.data.treasures} Treasures`}/>
-              <h6 className="mt-3">
-                {numberFormat(props.data.treasures)} <span className="text-gray-500 fw-light">Treasures</span>
-              </h6>
-            </div>
-            <div className="col-auto">
-              <img src={ic_cities} alt={`${props.data.cities} Cities`}/>
-              <h6 className="mt-3">
-                {numberFormat(props.data.cities)} <span className="text-gray-500 fw-light">Cities</span>
-              </h6>
+          </div>
+
+          <div className="col-auto">
+            <div className="imageHero">
+              <img src={imageHero} alt="Room with couches" className="img-fluid position-absolute imageHero" style={{margin: '-30px 0 0 -30px', zIndex: 1}}/>
+              <img src={frameHero} alt="Room with couches" className="img-fluid position-absolute imageHero"/>
             </div>
           </div>
         </div>
-
-        <div className="col-auto">
-          <div className="imageHero">
-            <img src={imageHero} alt="Room with couches" className="img-fluid position-absolute imageHero" style={{margin: '-30px 0 0 -30px', zIndex: 1}}/>
-            <img src={frameHero} alt="Room with couches" className="img-fluid position-absolute imageHero"/>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    // </Fade>
   );
 };
 

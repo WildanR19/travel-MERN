@@ -5,7 +5,7 @@ import Button from "../elements/Button";
 
 const Testimony = ({data}) => {
   return (
-    <div className="container">
+    <div className="container py-4">
       <div className="row align-items-center">
         <div className="col-4">
           <div className="testimonial-hero">
