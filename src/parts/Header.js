@@ -6,6 +6,17 @@ const Header = (props) => {
   const getNavLinkClass = (path) => {
     return window.location.pathname === path ? 'active' : ''
   }
+  if (props.isCentered)
+    return (
+      <header className="spacing-sm">
+        <div className="container">
+          <nav className="navbar navbar-expand-lg navbar-light">
+            <IconText className="mx-auto" />
+          </nav>
+        </div>
+      </header>
+    )
+
   return (
       <header className="spacing-sm">
         <div className="container">
